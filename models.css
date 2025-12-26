@@ -1,0 +1,122 @@
+.model-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    margin-top: 30px;
+    height: 100%;
+}
+
+div.body.container-fluid {
+    margin-top: 8rem;
+}
+
+.model-card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.model-card .card-img-top {
+    height: 300px;
+    /* Adjust the height as needed */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.color-gradient {
+    background: linear-gradient(to right, rgb(10, 10, 157), rgb(235, 131, 148), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+nav.navbar {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+a.nav-link {
+    border-radius: 5px;
+}
+
+.navbar-nav a.nav-link.active {
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar-nav a.nav-link:hover {
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* footer */
+
+section {
+    margin-top: 50px;
+}
+
+.footer {
+    background-color: #24292d;
+    color: #fff;
+    padding: 50px 25px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1 1 300px;
+    margin: 10px 0px 20px 140px;
+}
+
+.box h3 {
+    margin-bottom: 20px;
+}
+
+.box a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.image-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 50px;
+    color: #ccc;
+}

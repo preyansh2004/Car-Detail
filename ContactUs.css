@@ -1,0 +1,153 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar styles */
+nav.navbar {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+div.body.container-fluid {
+    margin-top: 8rem;
+}
+
+a.nav-link {
+    border-radius: 5px;
+}
+
+.navbar-nav a.nav-link.active,
+.navbar-nav a.nav-link:hover {
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container.body {
+    max-width: 5000px;
+    padding: 150px 150px 40px 150px;
+}
+
+/* Center align text */
+.container div[style="text-align:center"] {
+    margin-bottom: 20px;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Row styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Column styles */
+.column {
+    flex: 50%;
+    padding: 0 15px;
+}
+
+/* Form styles */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Image styles */
+img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #24292d;
+    color: #fff;
+    padding: 25px 25px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1 1 300px;
+    margin: 10px 0px 20px 140px;
+}
+
+.box h3 {
+    margin-bottom: 20px;
+}
+
+.box a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.image-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 50px;
+    color: #ccc;
+}

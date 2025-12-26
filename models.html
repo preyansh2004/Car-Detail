@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rolls-Royce Models</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="models.css"> <!-- Link to external CSS file -->
+    <script>
+        $(function () {
+            const apiUrl = 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModels&make=rolls-royce';
+            const carImages = ['images/100-1.jpg', 'images/Camargue-1.jpg', 'images/Corniche-1.jpg', 'images/Ghost-1.jpg',
+                'images/Ghost-Series-II-1.jpg', 'images/Park-Ward-1.jpg', 'images/Phantom-1.jpg',
+                'images/Phantom-Drophead-Coupe-1.jpg', 'images/Silver-Cloud-1.jpg', 'images/Silver-Cloud-II-1.jpg',
+                'images/Silver-Dawn-1.jpg', 'images/Silver-Seraph-1.jpg', 'images/Silver-Shadow-1.jpg', 'images/Silver-Spirit-1.jpg',
+                'images/Silver-Spirit-II-1.jpg', 'images/Silver-Spur-1.jpg', 'images/Silver-Wraith-1.jpg', 'images/Wraith-1.jpg']; // Array of car images
+
+            $.getJSON(apiUrl, function (data) {
+                data.Models.forEach(function (model, index) {
+                    const modelName = model.model_name;
+                    const modelImage = carImages[index]; // Get image path from the array
+                    const modelLink = `details.html?model=${encodeURIComponent(modelName)}`;
+                    // Create Bootstrap card element
+                    const card = `
+                        <div class="col-lg-4 col-md-6 mt-2">
+                            <div class="card model-card">
+                                <img src="${modelImage}" class="card-img-top" alt="${modelName}">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">${modelName}</h5>
+                                    <a href="${modelLink}" class="btn btn-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    // Append card to models list
+                    $('#models').append(card);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <!-- Navbar brand or logo -->
+            <a class="navbar-brand" href="#"><img src="logo.jpeg" alt="Logo"></a>
+
+            <!-- Toggler button for mobile view -->
+            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mr-5">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="home.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Dealers.html"><i class="fas fa-store"></i> Dealers</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="models.html"><i class="fas fa-car"></i> Models</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="service.html"><i class="fas fa-tools"></i> Service</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="ContactUs.html"><i class="fas fa-envelope"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid body">
+        <div class=" font-extrabold text-center mt-3 display-3">
+            <span class="color-gradient">
+                Models
+            </span>
+        </div>
+        <div class="container">
+            <div class="row" id="models">
+                <!-- Models will be listed here -->
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="image-section">
+                <img src="logo.jpeg" alt="Image Description">
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="home.html"><i class="fas fa-arrow-right"></i> Home</a>
+                <a href="Dealers.html"><i class="fas fa-arrow-right"></i> Dealers</a>
+                <a href="models.html"><i class="fas fa-arrow-right"></i> Models</a>
+                <a href="service.html"><i class="fas fa-arrow-right"></i> Service</a>
+                <a href="ContactUs.html"><i class="fas fa-arrow-right"></i> Contact Us</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a><i class="fas fa-phone"></i> +1 234 567 890</a>
+                <a><i class="fas fa-envelope"></i> example@example.com</a>
+                <a><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</a>
+            </div>
+
+            <div class="box">
+                <h3>Other Info</h3>
+                <a><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a><i class="fab fa-twitter"></i> Twitter</a>
+                <a><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+
+        <div class="credit">Copyright @ 2024 by <span>XYZ</span> | All Rights Reserved!</div>
+    </section>
+</body>
+
+</html>
